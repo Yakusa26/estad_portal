@@ -1,0 +1,137 @@
+:root {
+    --primary-color: rgba(66, 0, 128, 0.973);
+    /* violet primaire modernisé */
+    --secondary-color: #7B8D8E;
+    /* Gris doux */
+    --text-color: #333;
+    /* Texte principal */
+    --background-color: #f9f9f9;
+    /* Fond léger */
+    --card-background: #fff;
+    /* Fond des cartes/formulaires */
+    --input-background: #eef2f3;
+    /* Fond des champs de saisie */
+    --hover-color:rgba(66, 0, 128, 0.973);
+    /* Couleur de survol */
+    --border-radius: 5px;
+    /* Arrondir les coins */
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img,
+footer img {
+    height: 40px;
+}
+
+header span,
+footer span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form p {
+    margin: 0;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--input-background);
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the element's total width and height */
+}
+
+form input::placeholder,
+form select {
+    color:var(--secondary-color);
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--hover-color);
+}
+
+form a {
+    text-decoration: none;
+    color: inherit;
+}
+
+form .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+@media print {
+
+    header,
+    footer,
+    .actions {
+        display: none !important;
+    }
+
+    main {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+}

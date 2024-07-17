@@ -1,0 +1,101 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color:  rgba(66, 0, 128, 0.973);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img,
+footer img {
+    height: 40px;
+}
+
+header span,
+footer span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header .subtitle {
+    font-size: 12px;
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    text-align: center;
+    color:  rgba(66, 0, 128, 0.973);
+    margin-bottom: 20px;
+}
+
+.details {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.form-container p {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(66, 0, 128, 0.973);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color:  rgba(66, 0, 128, 0.973)sss;
+}
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    header,
+    footer,
+    .actions {
+        display: none;
+    }
+
+    main {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-container p {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+}

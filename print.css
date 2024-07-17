@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.a4-container {
+    background: white;
+    width: 210mm;
+    height: 290mm;
+    padding: 5mm;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    box-sizing: border-box;
+}
+
+.inner-border {
+    border: 1px solid #000;
+    position: relative;
+    top: 0;
+    bottom: 40mm;
+    left: 0;
+    right: 0;
+    padding: 5mm;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .left,
+.header .right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    width: 20%;
+    text-align: center;
+}
+
+.header .text-box {
+    text-align: center;
+    padding: 5px;
+    /* margin-bottom: 5px; */
+}
+
+.header .text-box.no-border {
+    border: none;
+}
+
+.header h4 {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+.header p {
+    margin: 3px 0;
+    font-size: 10px;
+    line-height: 1.1;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+
+.left-info {
+    width: 70%;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.left-info p.bold {
+    font-weight: bold;
+}
+
+.left-info p.italic {
+    font-style: italic;
+}
+
+.left-info p {
+    margin: 5px 0;
+}
+
+.left-info .red {
+    color: red;
+}
+
+.right-photo {
+    width: 25%;
+    text-align: right;
+}
+
+.photo-frame {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.main {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.main h5 {
+    text-align: left;
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-bottom: 20px; */
+    font-size: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 8px;
+}
+
+td.label {
+    width: 30%;
+}
+
+.sign {
+    text-align: right;
+}
+
+.sign .sign-content {
+    display: inline-block;
+    text-align: left;
+    font-size: 10px;
+    margin-bottom: 60px;
+}
+
+
+
+.footer {
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0mm;
+    left: 10mm;
+    right: 10mm;
+    margin: 10px;
+    line-height: 0.5;
+}
+
+.middle {
+    width: 5%;
+    /* Make the middle cell smaller */
+    text-align: center;
+    white-space: nowrap;
+    /* Prevent the text from wrapping */
+}
