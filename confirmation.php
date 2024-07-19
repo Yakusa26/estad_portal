@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="confirmation.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation</title>
+    <title>Confirmation Inscription</title>
 </head>
 <body>
     <?php
