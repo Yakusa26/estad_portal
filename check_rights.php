@@ -30,6 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($mot_de_passe == $db_mot_de_passe)
       header("location:eu_admin.php") ;
     else
-      header ("location:login.php?state= error");
+      header ("location:login.php?state=error");
  }
  ?>
