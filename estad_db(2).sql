@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 17 juil. 2024 à 23:29
--- Version du serveur : 8.3.0
--- Version de PHP : 8.2.18
+-- Généré le : lun. 22 juil. 2024 à 13:04
+-- Version du serveur : 8.2.0
+-- Version de PHP : 8.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `etudiants` (
   KEY `type_formation_id` (`type_formation_id`),
   KEY `filiere_id` (`filiere_id`),
   KEY `specialite_id` (`specialite_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `etudiants`
@@ -63,7 +63,8 @@ CREATE TABLE IF NOT EXISTS `etudiants` (
 
 INSERT INTO `etudiants` (`id`, `prenom`, `deuxieme_prenom`, `nom_de_famille`, `sexe`, `date_de_naissance`, `quartier`, `ville`, `departement`, `code_postal`, `adresse`, `email`, `telephone`, `nationalite`, `matricule`, `annee`, `numero_ordre`, `cycle`, `niveau`, `type_formation_id`, `filiere_id`, `specialite_id`) VALUES
 (1, 'eaze', 'eaze', 'eaz', 'Feminin', '2024-07-18', '', 'eaze', 'eaze', 'ezae', 'eazee', 'dqsd@dqsd.fr', 'eaze', 'eaze', 'EU3240001', '2024/2025', '220242025', 'Master', '0', 3, 1, 1),
-(2, 'eaze', 'eaze', 'eaz', 'Feminin', '2024-07-18', '', 'eaze', 'eaze', 'ezae', 'eazee', 'dqsd@dqsd.fr', 'eaze', 'eaze', 'EU2240001', '2024/2025', '220242025', 'Master', 'M2', 2, 2, 8);
+(2, 'eaze', 'eaze', 'eaz', 'Feminin', '2024-07-18', '', 'eaze', 'eaze', 'ezae', 'eazee', 'dqsd@dqsd.fr', 'eaze', 'eaze', 'EU2240001', '2024/2025', '220242025', 'Master', 'M2', 2, 2, 8),
+(3, 'roger', 'dsdc', 'sfvsf', 'Masculin', '2023-06-07', '', 'sdc', 'sdv', 'sdv', 'sdvs', 'nkamaroger.237@gmail.com', '695432910', 'dzc', 'EU2240002', '2024/2025', '320242025', 'Licence', 'L3', 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -127,6 +128,28 @@ INSERT INTO `filierespartypesformation` (`type_formation_id`, `filiere_id`) VALU
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `role`
+--
+
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE IF NOT EXISTS `role` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `libelle` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `role`
+--
+
+INSERT INTO `role` (`id`, `libelle`) VALUES
+(1, 'Super Administrateur'),
+(2, 'Administrateur');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `specialites`
 --
 
@@ -178,6 +201,33 @@ INSERT INTO `typesformation` (`id`, `libelle`) VALUES
 (2, 'Formations Initiales'),
 (3, 'Formations Continues'),
 (4, 'Formations Certifiantes');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateurs`
+--
+
+DROP TABLE IF EXISTS `utilisateurs`;
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) DEFAULT NULL,
+  `prenom` varchar(255) DEFAULT NULL,
+  `profession` varchar(255) DEFAULT NULL,
+  `pseudo` varchar(255) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  `role_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `Utilisateurs_fk6` (`role_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`id`, `nom`, `prenom`, `profession`, `pseudo`, `mot_de_passe`, `role_id`) VALUES
+(1, 'Nkama', 'Roger', 'Etudiants', 'Toretto', 'Banane', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
