@@ -23,12 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 
     // Récupérer le résultat
-    
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $db_mot_de_passe = $row['mot_de_passe'];
+    $db_mot_de_passe = $row['mot_de_passe']; 
+
+
     if ($mot_de_passe == $db_mot_de_passe)
-     header("location:eu_admin.php") ;
-      else
-    header ("location:login.php?state= error");
+      header("location:eu_admin.php") ;
+    else
+      header ("location:login.php?state= error");
  }
  ?>

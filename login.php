@@ -8,10 +8,10 @@
 </head>
 <body>
 <?php
-$etat = "";
-if (isset($_GET['state'])) {
-    $etat = htmlspecialchars(strip_tags($_GET['state']));
-}
+    $etat = "";
+    if (isset($_GET['state'])) {
+        $etat = htmlspecialchars(strip_tags($_GET['state']));
+    }
 ?>
 <header>
     <div><img src="chapeau.png" alt="Logo ESTAD"></div>
@@ -25,12 +25,12 @@ if (isset($_GET['state'])) {
         <div class="D1"><input name="pseudo" type="text" placeholder="Entrer votre pseudo"> </div> <br>
         <label class="Q2" for="">Mot de passe</label> <br>
         <div class="D2"><input name="mot_de_passe" type="password" placeholder="Entrer mot de passe"></div>  <br>
-        <button type="submit">Se connecter</button><br>
         <?php
         if ($etat === 'error') {
-            echo '<p style="color: red;">Erreur: Identifiant ou mot de passe incorrect</p>';
+            echo ' <div class="D2"><p style="color: red;">Erreur: Identifiant ou mot de passe incorrect</p> </div>';
         }
         ?>
+        <button type="submit">Se connecter</button><br>
     </form>
 </div>
 
