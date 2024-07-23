@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pseudo= cleanInput($_POST['pseudo']);
     $mot_de_passe= cleanInput($_POST['mot_de_passe']);
     // Préparer et exécuter la requête SQL pour compter le nombre d'étudiants pour l'année en cours et le type de formation
-    $query = "SELECT mot_de_passe FROM `utilisateurs` WHERE pseudo = :pseudo;";
+    $query = "SELECT mot_de_passe, pseudo, nom, prenom, role_id, profession FROM `utilisateurs` WHERE pseudo = :pseudo;";
     $stmt = $db->prepare($query);
     $stmt->bindParam(':pseudo', $pseudo);
     $stmt->execute();
@@ -25,10 +25,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer le résultat
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $db_mot_de_passe = $row['mot_de_passe']; 
+    $pseudo = $row['pseudo']; 
+    $nom = $row['nom']; 
+    $prenom = $row['prenom']; 
+    $role_id = $row['role_id']; 
+    $profession = $row['profession']; 
 
 
-    if ($mot_de_passe == $db_mot_de_passe)
-      header("location:eu_admin.php") ;
+    if ($mot_de_passe == $db_mot_de_passe) {
+      session_start();
+      $_SESSION['pseudo'] = $pseudo;
+      $_SESSION['nom'] = $nom;
+      $_SESSION['prenom'] = $prenom;
+      $_SESSION['role_id'] = $role_id;
+      $_SESSION['profession'] = $profession;
+      header ("location:eu_admin.php");
+    }
     else
       header ("location:login.php?state=error");
  }

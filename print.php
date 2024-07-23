@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiche d'inscription ESTAD</title>
-    <link rel="stylesheet" href="print.css">
+    <link rel="stylesheet" href="assets/css/print.css">
 </head>
 
 <body>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="center">
-                    <img src="logo.png" alt="Logo" class="logo">
+                    <img src="assets/images/logo.png" alt="Logo" class="logo">
                 </div>
                 <div class="right">
                     <div class="text-box no-border">
