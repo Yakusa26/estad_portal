@@ -8,11 +8,12 @@
 </head>
 <body>
 <?php
-$etat = "";
-if (isset($_GET['state'])) {
-    $etat = htmlspecialchars(strip_tags($_GET['state']));
-}
+    $etat = "";
+    if (isset($_GET['state'])) {
+        $etat = htmlspecialchars(strip_tags($_GET['state']));
+    }
 ?>
+
 <header>
     <div><img src="chapeau.png" alt="Logo ESTAD"></div>
     <span>ESTAD<span style="font-size: 12px;">(Ecole Supérieur des Techniques Avancées pour le
@@ -22,16 +23,16 @@ if (isset($_GET['state'])) {
 <div class="A1"> 
     <form action="check_rights.php" method="post">
         <label class="Q1" for="">Pseudo</label> <br>
-        <div class="D1"><input name="pseudo" type="text" placeholder="Entrer votre pseudo"> </div> <br>
+        <div class="D1"><input name="pseudo" type="text" placeholder="Entrer votre pseudo" > </div> <br>
         <label class="Q2" for="">Mot de passe</label> <br>
-        <div class="D2"><input name="mot_de_passe" type="password" placeholder="Entrer mot de passe"></div>  <br>
+        <div class="D2"><input name="mot_de_passe" type="password" placeholder="Entrer mot de passe" ></div>  <br>
         <?php
         if ($etat === 'error') {
             echo ' <div class="D2"><p style="color: red;">Erreur: Identifiant ou mot de passe incorrect</p> </div>';
         }
         ?>
         <button type="submit">Se connecter</button><br>
-    </form>
+    </form>
 </div>
 <footer>
     <div><img src="chapeau.png" alt="Logo ESTAD"></div>
