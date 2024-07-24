@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="assets/css/login.css"> 
     <title>Connection</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
 ?>
 
 <header>
-    <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+    <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
     <span>ESTAD<span style="font-size: 12px;">(Ecole Supérieur des Techniques Avancées pour le
             Developpement)</span></span>
 </header>
@@ -35,7 +35,7 @@
     </form>
 </div>
 <footer>
-    <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+    <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
     <span>copyrigth&copy; 2024 ESTAD University</span>
 </footer>
 </body>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="HOME.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTAD - Formulaire d'inscription</title>
     <style>
@@ -60,7 +60,7 @@
     ?>
 
     <header>
-        <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+        <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
         <span>ESTAD<span style="font-size: 12px;">(Ecole Supérieur des Techniques Avancées pour le Developpement)</span></span>
     </header>
 
@@ -146,7 +146,7 @@
     </main>
 
     <footer>
-        <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+        <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
         <span>copyright&copy; 2024 ESTAD University</span>
     </footer>
 
