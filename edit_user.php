@@ -69,6 +69,7 @@ if(isset($_POST['update_user'])) {
                 <li><a href="eu_admin.php">Accueil</a></li>
                 <li><a href="student_list.php">Les étudiants</a></li>
                 <li><a href="user_management.php">Les utilisateurs</a></li>
+                <li> <a href="type_of_formations">Les formations</a> </li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>
         </div>

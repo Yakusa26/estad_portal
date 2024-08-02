@@ -27,8 +27,9 @@
                 <li><a href="#">Accueil</a></li>
                 <li><a href="student_list.php">Les étudiants</a></li>
                 <li><a href="user_management.php">Les utilisateurs</a></li>
-                <li><a href="#">Les formations</a></li>
+                <li><a href="type_of_formation.php">Les formations</a></li>
                 <li><a href="#">Les filières</a></li>
+                <li><a href="#">Les filières par formation</a></li>
                 <li><a href="#">Les spécialités</a></li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>

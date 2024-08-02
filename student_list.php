@@ -64,8 +64,10 @@ $etudiants = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <ul>
                 <li><a href="eu_admin.php">Accueil</a></li>
                 <li><a href="student_list.php">Les étudiants</a></li>
-                <li><a href="#">Les formations</a></li>
+                <li><a href="user_management.php">Les utilisateurs</a></li>
+                <li><a href="type_of_formation.php">Les formations</a></li>
                 <li><a href="#">Les filières</a></li>
+                <li><a href="#">Les filières par formation</a></li>
                 <li><a href="#">Les spécialités</a></li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>
@@ -99,21 +101,21 @@ $etudiants = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <tbody>
                         <?php foreach($etudiants as $etudiant): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($etudiant['id']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['prenom'] . ' ' . $etudiant['deuxieme_prenom'] . ' ' . $etudiant['nom_de_famille']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['matricule']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['type_formation']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['filiere']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['specialite']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['cycle']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['niveau']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['sexe']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['date_de_naissance']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['email']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['telephone']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['nationalite']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['annee']); ?></td>
-                            <td><?php echo htmlspecialchars($etudiant['numero_ordre']); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['id'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars(($etudiant['prenom'] ?? '') . ' ' . ($etudiant['deuxieme_prenom'] ?? '') . ' ' . ($etudiant['nom_de_famille'] ?? '')) ?: 'N/A'; ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['matricule'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['type_formation'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['filiere'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['specialite'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['cycle'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['niveau'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['sexe'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['date_de_naissance'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['email'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['telephone'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['nationalite'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['annee'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($etudiant['numero_ordre'] ?? 'N/A'); ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>

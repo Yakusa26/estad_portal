@@ -31,23 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $role_id = $row['role_id']; 
     $profession = $row['profession']; 
 
-    if (!empty($db_mot_de_passe) && $mot_de_passe == $db_mot_de_passe) {
-        //commencer la session
-     session_start();
-     $_SESSION['nom'] = $db_nom;
-     $_SESSION['prenom'] = $db_prenom;
-     $_SESSION['profession'] = $db_profession;
-     $_SESSION['pseudo'] = $db_pseudo;
-
-        header("Location: eu_admin.php");
-        exit();
-    } else {
-        header("Location: login.php?state=error");
-        exit();
-     }
-    }   
-
     if ($mot_de_passe == $db_mot_de_passe) {
+      //Commencer la session
       session_start();
       $_SESSION['pseudo'] = $pseudo;
       $_SESSION['nom'] = $nom;
@@ -60,4 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       header ("location:login.php?state=error");
  
   
+    }   
+
+    
  ?>

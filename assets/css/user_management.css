@@ -3,7 +3,10 @@ form {
     margin-bottom: 20px;
 }
 
-form input[type="text"], form input[type="password"], form select, input {
+form input[type="text"],
+form input[type="password"],
+form select,
+input {
     padding: 8px;
     margin: 5px 0;
     width: 100%;
@@ -22,7 +25,8 @@ form button:hover {
     background-color: #575757;
 }
 
-.message, .error {
+.message,
+.error {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -44,7 +48,8 @@ table {
     margin-bottom: 20px;
 }
 
-table th, table td {
+table th,
+table td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
@@ -70,4 +75,20 @@ table a {
 
 table a:hover {
     text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(66, 0, 128, 0.973);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
