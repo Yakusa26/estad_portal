@@ -32,14 +32,14 @@
     }
     ?>
     <header>
-        <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+        <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
         <span>ESTAD<span style="font-size: 12px;">(Ecole Supérieur des Techniques Avancées pour le
                 Developpement)</span></span>
     </header>
 
     <section>
         <main>
-            <div class="logo-container"><img src="chapeau.png" height="80px" alt="Logo"></div>
+            <div class="logo-container"><img src="assets/images/chapeau.png" height="80px" alt="Logo"></div>
             <h1>Confirmation d'enregistrement</h1>
             <div class="details">Les détails de l'étudiant enregistré :</div>
             <div class="form-container">
@@ -71,7 +71,7 @@
     </section>
 
     <footer>
-        <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+        <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
         <span>copyrigth&copy; 2024 ESTAD University</span>
     </footer>
 </body>

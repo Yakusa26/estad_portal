@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="HOME.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTAD - Formulaire d'inscription</title>
     <style>
@@ -60,7 +60,7 @@
     ?>
 
     <header>
-        <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+        <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
         <span>ESTAD<span style="font-size: 12px;">(Ecole Supérieur des Techniques Avancées pour le Developpement)</span></span>
     </header>
 
@@ -90,7 +90,7 @@
                 <input type="text" name="quartier" placeholder="Quartier" required>
                 <input type="text" name="ville" placeholder="Ville" required>
                 <input type="text" name="departement" placeholder="Département" required>
-                <input type="text" name="code_postal" placeholder="Code postal" required>
+                <input type="text" name="code_postal" placeholder="Code postal" >
             </div>
             <div>
                 <p>Contact</p>
@@ -146,7 +146,7 @@
     </main>
 
     <footer>
-        <div><img src="chapeau.png" alt="Logo ESTAD"></div>
+        <div><img src="assets/images/chapeau.png" alt="Logo ESTAD"></div>
         <span>copyright&copy; 2024 ESTAD University</span>
     </footer>
 
@@ -190,17 +190,24 @@
                 var formationLibelle = typeFormationSelect.options[typeFormationSelect.selectedIndex].textContent;
                 if (formationLibelle === 'Formations Initiales' || formationLibelle === 'Formations Continues'){
                     niveauContainer.classList.remove('hidden');
+                    document.getElementById('specialite').setAttribute('required', 'required');
                 }
                 else{
                     niveauContainer.classList.add('hidden');
+                    document.getElementById('specialite').removeAttribute('required');
                 }
 
+                   // Au cas ou c'est une formation certifiantes
+
+              
                 // Afficher le conteneur des filières
                 if (filteredFilieres.length > 0) {
                     filiereContainer.classList.remove('hidden');
                 } else {
                     filiereContainer.classList.add('hidden');
                 }
+
+              
             }
 
             function updateSpecialiteOptions() {
@@ -227,10 +234,13 @@
                 // Afficher le conteneur des spécialités
                 if (filteredSpecialites.length > 0) {
                     specialiteContainer.classList.remove('hidden');
+                    document.getElementById('specialite').setAttribute('required', 'required');
                 } else {
                     specialiteContainer.classList.add('hidden');
+                    document.getElementById('specialite').removeAttribute('required');
                 }
-            }
+
+            }     
 
             typeFormationSelect.addEventListener('change', function() {
                 // Réinitialiser les sélecteurs
@@ -239,6 +249,7 @@
 
                 // Masquer le sélecteur de spécialités
                 specialiteContainer.classList.add('hidden');
+                document.getElementById('specialite').removeAttribute('required');
 
                 // Mettre à jour les filières en fonction du type de formation sélectionné
                 updateFiliereOptions();
