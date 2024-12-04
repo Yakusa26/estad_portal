@@ -52,6 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cycle = 'BTS';
             break;
     }
+
+    $statut = "En attente";
     try {
         // Préparer et exécuter la requête SQL pour compter le nombre d'étudiants pour l'année en cours et le type de formation
         $query = "SELECT COUNT(*) AS nombre_etudiants FROM Etudiants WHERE annee = :annee AND type_formation_id = :type_formation";
