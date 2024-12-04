@@ -1,0 +1,94 @@
+/* Styles pour la gestion des utilisateurs */
+form {
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select,
+input {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: rgba(66, 0, 128, 0.973);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #575757;
+}
+
+.message,
+.error {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.message {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+table th {
+    background-color: rgba(66, 0, 128, 0.973);
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table a {
+    color: rgba(66, 0, 128, 0.973);
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(66, 0, 128, 0.973);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
